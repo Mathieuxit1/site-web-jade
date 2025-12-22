@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #6fb1fc, #a1c4fd);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.about p {
+  line-height: 1.6;
+}
+
+.post-form input,
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.post-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.post-form button {
+  background: #6fb1fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.post-form button:hover {
+  background: #5a9fe0;
+}
+
+.community .post {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.post h4 {
+  color: #6fb1fc;
+}
+
+.post p {
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
