@@ -12,7 +12,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // 🔐 Mot de passe admin
-const ADMIN_PASSWORD = "Jade!";
+const ADMIN_PASSWORD = "jade";
 let isAdmin = false;
 
 // 🔑 CONFIG FIREBASE
