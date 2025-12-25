@@ -36,6 +36,12 @@ const adminPass = document.getElementById("adminPass");
 const loginAdmin = document.getElementById("loginAdmin");
 const adminStatus = document.getElementById("adminStatus");
 
+// 💾 Charger le prénom sauvegardé
+const savedUsername = localStorage.getItem("jade_username");
+if (savedUsername) {
+  username.value = savedUsername;
+}
+
 // 🛡️ Activation du mode admin
 loginAdmin.addEventListener("click", () => {
   if (adminPass.value === ADMIN_PASSWORD) {
@@ -52,6 +58,9 @@ postBtn.addEventListener("click", async () => {
     alert("Merci de remplir tous les champs ❗");
     return;
   }
+
+  // 💾 Sauvegarder le prénom
+  localStorage.setItem("jade_username", username.value);
 
   await addDoc(collection(db, "posts"), {
     user: username.value,

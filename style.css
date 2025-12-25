@@ -1,85 +1,137 @@
+/* 🌿 RESET & BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body {
-  background: #f4f6f8;
+  background: linear-gradient(180deg, #f4f6fb, #eef1f7);
   color: #333;
+  min-height: 100vh;
 }
 
+/* 🌿 HEADER */
 header {
-  background: linear-gradient(135deg, #6fb1fc, #a1c4fd);
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
   color: white;
-  padding: 40px 20px;
   text-align: center;
+  padding: 50px 20px;
 }
 
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+/* 🌿 SECTIONS */
 section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 25px;
   background: white;
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.about p {
-  line-height: 1.6;
+section h2 {
+  margin-bottom: 15px;
+  color: #6b5ca5;
 }
 
-.post-form input,
-.post-form textarea {
+/* 🌿 FORMULAIRES */
+input,
+textarea {
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   margin: 10px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
 }
 
-.post-form textarea {
+textarea {
   resize: none;
-  height: 100px;
+  height: 120px;
 }
 
-.post-form button {
-  background: #6fb1fc;
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #a18cd1;
+}
+
+/* 🌿 BOUTONS */
+button {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.post-form button:hover {
-  background: #5a9fe0;
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.community .post {
-  border-bottom: 1px solid #eee;
-  padding: 15px 0;
+/* 🌿 POSTS */
+.post {
+  background: #f8f9fd;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
-.post h4 {
-  color: #6fb1fc;
+.post strong {
+  color: #6b5ca5;
+  font-size: 1.1rem;
 }
 
 .post p {
-  margin-top: 5px;
+  margin-top: 8px;
+  line-height: 1.5;
 }
 
+/* ❌ BOUTON SUPPRESSION ADMIN */
 .delete {
-  background: red;
-  color: white;
-  border: none;
-  padding: 5px 8px;
-  cursor: pointer;
-  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  padding: 6px 9px;
+  font-size: 0.9rem;
 }
 
+.delete:hover {
+  background: #e63939;
+}
+
+/* 🌿 FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   color: #777;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    margin: 20px 10px;
+    padding: 20px;
+  }
 }
