@@ -69,6 +69,15 @@ section {
   margin-top: 5px;
 }
 
+.delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
