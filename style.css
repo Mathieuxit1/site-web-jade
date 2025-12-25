@@ -102,19 +102,31 @@ button:hover {
   line-height: 1.5;
 }
 
-/* ❌ BOUTON SUPPRESSION ADMIN */
+/* ❌ Bouton suppression élégant */
 .delete {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #ff4d4d;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 80, 80, 0.85);
+  color: white;
+  border: none;
   border-radius: 50%;
-  padding: 6px 9px;
-  font-size: 0.9rem;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+/* Affiché seulement au survol */
+.post:hover .delete {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .delete:hover {
-  background: #e63939;
+  background: #ff4d4d;
 }
 
 /* 🌿 FOOTER */
@@ -134,4 +146,328 @@ footer {
     margin: 20px 10px;
     padding: 20px;
   }
+}
+
+/* Animation suppression */
+.post.removing {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 🌙 Bouton mode sombre */
+.theme-toggle {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 🌙 MODE SOMBRE */
+body.dark {
+  background: linear-gradient(180deg, #1e1e2f, #121212);
+  color: #e0e0e0;
+}
+
+body.dark section {
+  background: #1f1f2e;
+  box-shadow: none;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #434343, #1c1c1c);
+}
+
+body.dark .post {
+  background: #2a2a3d;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #2a2a3d;
+  color: white;
+  border-color: #444;
+}
+
+body.dark footer {
+  color: #aaa;
+}
+
+/* Messages de l'utilisateur en sombre */
+body.dark .post.mine {
+  background: #2f2f4f;
+  border-left: 4px solid #a18cd1;
+}
+
+/* ✨ Effet cartes élégantes */
+section {
+  position: relative;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.dark section {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Animation douce à l'apparition */
+section {
+  animation: fadeInUp 0.6s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Micro-détails esthétiques */
+.post {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.post:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+button {
+  letter-spacing: 0.3px;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  border-radius: 2px;
+}
+
+/* 📱 MOBILE AVANCÉ */
+@media (max-width: 768px) {
+
+  header {
+    padding: 30px 15px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 20px 12px;
+    padding: 20px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    border-radius: 16px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .post {
+    padding: 18px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+  }
+
+  .post strong {
+    font-size: 1rem;
+  }
+
+  .post p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .delete {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.dark {
+    background: #121212;
+  }
+
+  body.dark section {
+    background: #1e1e2e;
+  }
+}
+/* 🎵 SECTION TIKTOK */
+.tiktok-showcase {
+  text-align: center;
+  background: linear-gradient(135deg, #000000, #1f1f1f);
+  color: white;
+}
+
+.tiktok-showcase h2 {
+  color: white;
+}
+
+.tiktok-desc {
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 10px auto 25px;
+}
+
+/* Conteneur responsive */
+.tiktok-embed {
+  max-width: 350px;
+  margin: 0 auto 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.tiktok-embed iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* Bouton suivre */
+.tiktok-follow {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff0050, #00f2ea);
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tiktok-follow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 0, 80, 0.5);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .tiktok-embed iframe {
+    height: 520px;
+  }
+}
+
+/* 🌿 RÈGLES & ESPRIT */
+.rules {
+  background: linear-gradient(135deg, #f7f8fc, #ffffff);
+}
+
+.rules-intro {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.rules-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.rules-list li {
+  padding-left: 20px;
+  margin-bottom: 12px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.rules-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #6b5ca5;
+  font-size: 1.2rem;
+}
+
+.rules-footer {
+  margin-top: 20px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Mode sombre */
+body.dark .rules {
+  background: #1f1f2e;
+}
+
+body.dark .rules-intro,
+body.dark .rules-footer {
+  color: #ccc;
+}
+
+.post-date {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* Mode sombre */
+body.dark .post-date {
+  color: #aaa;
+}
+
+/* 🤖 Message JadeBot */
+.post.bot {
+  background: linear-gradient(135deg, #e8f0ff, #f6f8ff);
+  border-left: 4px solid #6b5ca5;
+}
+
+body.dark .post.bot {
+  background: #2a2a4a;
+}
+
+.badge-modo {
+  background: #4caf50;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-left: 6px;
 }
