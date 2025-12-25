@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-header 
+header {
   background: linear-gradient(135deg, #6fb1fc, #a1c4fd);
   color: white;
   padding: 40px 20px;
