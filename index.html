@@ -7,12 +7,27 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<!-- 🛡️ Panneau de modération caché -->
+<div id="modPanel" class="mod-panel hidden">
+  <div class="mod-panel-content">
+    <h2>🛡️ Modération</h2>
+
+    <input id="modTarget" type="text" placeholder="Pseudo ciblé">
+    
+    <div class="mod-actions">
+      <button data-action="ban">🚫 Bannir</button>
+      <button data-action="unban">♻️ Débannir</button>
+    </div>
+
+    <button id="closeModPanel" class="close">Fermer</button>
+  </div>
+</div>
 <body>
 
 <header>
   <h1>🌿 Communauté de Jade</h1>
   <p>Un espace d’échange, de partage et de bienveillance</p>
-  <button id="themeToggle" class="themeToggle">🌙 Mode Sombre</button>
+  <button id="themeToggle" class="theme-toggle">🌙 Mode sombre</button>
 </header>
 
 <section class="about">
@@ -33,34 +48,15 @@
   </p>
 
   <ul class="rules-list">
-    <li>
-      <strong>Respect avant tout</strong>  
-      — aucun message insultant, discriminant ou agressif ne sera toléré.
-    </li>
-    <li>
-      <strong>Bienveillance et courtoisie</strong>  
-      — chacun est libre de s’exprimer tant que cela reste respectueux.
-    </li>
-    <li>
-      <strong>Pas de spam</strong>  
-      — les messages promotionnels ou hors sujet seront supprimés.
-    </li>
-    <li>
-      <strong>Modération active</strong>  
-      — l’équipe se réserve le droit de supprimer tout contenu inapproprié.
-    </li>
+    <li><strong>Respect avant tout</strong> — aucun message insultant ou agressif.</li>
+    <li><strong>Bienveillance</strong> — chacun peut s’exprimer librement.</li>
+    <li><strong>Pas de spam</strong> — contenu hors sujet supprimé.</li>
+    <li><strong>Modération active</strong> — l’équipe veille au respect.</li>
   </ul>
 
   <p class="rules-footer">
-    Merci de contribuer à un espace sain et agréable pour tous 🤍
+    Merci de contribuer à un espace sain et agréable 🤍
   </p>
-</section>
-
-<section class="admin">
-  <h2>🛡️ Modération</h2>
-  <input type="password" id="adminPass" placeholder="Mot de passe admin">
-  <button id="loginAdmin">Activer</button>
-  <p id="adminStatus"></p>
 </section>
 
 <section class="post-form">
@@ -79,8 +75,7 @@
   <h2>🎵 Jade sur TikTok</h2>
 
   <p class="tiktok-desc">
-    Retrouve Jade sur TikTok pour plus de contenus,
-    de créativité et de moments partagés ✨
+    Retrouve Jade sur TikTok pour plus de contenus ✨
   </p>
 
   <div class="tiktok-embed">
@@ -100,10 +95,9 @@
 </section>
 
 <footer>
-  <p>© 2025 - Communauté de Jadou</p>
+  <p>© 2025 – Communauté de Jadou</p>
 </footer>
 
 <script type="module" src="script.js"></script>
-
 </body>
 </html>

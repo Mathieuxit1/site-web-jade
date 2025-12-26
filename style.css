@@ -471,3 +471,72 @@ body.dark .post.bot {
   border-radius: 8px;
   margin-left: 6px;
 }
+
+.mod-panel {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mod-panel.hidden {
+  display: none;
+}
+
+.mod-panel-content {
+  background: var(--bg, #fff);
+  color: var(--text, #000);
+  width: 90%;
+  max-width: 360px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.mod-panel-content h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.mod-panel-content input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.mod-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.mod-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mod-actions button[data-action="ban"] {
+  background: #e53935;
+  color: white;
+}
+
+.mod-actions button[data-action="unban"] {
+  background: #43a047;
+  color: white;
+}
+
+.close {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
